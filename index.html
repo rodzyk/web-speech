@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Web Speech API Test </title>
+    <style>
+      * { box-sizing: border-box; }
+
+      html {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 10fr 1fr;
+        font-family: sans-serif;
+        background-color: #161a20;
+        color: white;
+      }
+
+      header {
+        margin: 0;
+        padding: 0.5rem;
+        background-color: #166496;
+        text-align: center;
+        color: white;
+      }
+
+      #output {
+        margin: 0;
+        padding: 0.5em;
+        border: 0;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        gap: .5ch;
+        overflow-y: auto;
+        font-family: monospace;
+      }
+
+      #output div {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1ch;
+        padding: .25ch;
+        border: 1px solid #fff1;
+        line-height: 1;
+        align-items: center;
+      }
+
+      #start {
+        display: block;
+        background-color: #166496;
+        border: 0;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      code.error {
+        color: red;
+      }
+      code.log {
+        color: #166496;
+      }
+      code.ok {
+        color: green;
+      }
+
+      small {
+        opacity: .5;
+      }
+
+      #start.rec, header.rec {
+        background-color: #961664;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header id="header">
+        <h1> Web Speech API Test </h1>
+        <div>
+            <select id="lang">
+                <option selected value="en-US">en-US</option>
+                <option value="uk-UA">uk-UA</option>
+            </select>
+            <input checked type="checkbox" id="continuous">
+            <label for="continuous">continuous</label>
+        </div>
+    </header>
+    <div id="output">s</div>
+    <button id="start"> START </button>
+    <script src="index.js?29"></script>
+  </body>
+</html>
